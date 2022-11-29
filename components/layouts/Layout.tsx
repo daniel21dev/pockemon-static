@@ -1,6 +1,7 @@
 import { ReactRef } from "@nextui-org/react/types/utils/refs";
 import Head from "next/head";
 import React from "react";
+import { Navbar } from "../ui";
 
 interface Props {
   title?: string;
@@ -21,8 +22,15 @@ export const Layout = ({ children, title }: Props) => {
       </Head>
 
       {/* navbar */}
+      <Navbar />
 
-      <main>{children}</main>
+      <main
+        style={{
+          padding: "0px 20px",
+        }}
+      >
+        {children}
+      </main>
     </>
   );
 };
