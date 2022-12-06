@@ -13,12 +13,12 @@ export const PokemonCard = ({ pokemon: { id, name, image } }: Props) => {
   const onClick = () => {
     console.log("click");
 
-    router.push(`/pokemon/${id}`);
+    router.push(`/name/${name}`);
   };
 
   return (
     <Grid key={id} xs={3} md={2} xl={1} onClick={onClick}>
-      <Card isHoverable css={{ cursor: "pointer" }}>
+      <Card isHoverable isPressable>
         <Card.Body css={{ p: 1 }}>
           <Card.Image src={image!} width="100%" height={140} />
         </Card.Body>
